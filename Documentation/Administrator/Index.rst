@@ -33,35 +33,36 @@ To install the extension, perform the following steps:
 
 #. Go to the Extension Manager
 #. Install the extension
-#. Load the static template
-#. ...
-
-For a list of configuration options, using a definition list is recommended:
-
-Some Configuration
-  This option enables...
-
-Other configuration
-  This other option is for all the rest...
-
-
-.. figure:: ../Images/AdministratorManual/ExtensionManager.png
-   :alt: Extension Manager
-
-   Extension Manager (caption of the image)
-
-   List of extensions within the Extension Manager also shorten with "EM" (legend of the image)
+#. add Feature Configuration to localconf.php or AdditionalConfiguration.php (Typo3 6.2+) 
 
 
 .. _admin-configuration:
 
 Configuration
 -------------
+The configuration of The Extension is stored $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rollout']
+this means you have to edit your localconf.php or AdditionalConfiugration.php (in Newer Typo3 Versions)
 
-* Where and how the extension should be configured? TypoScript? PHP?
+Example:
 
-* Are there other prerequisite to full fill beforehand?
-  For example, configure a setting in a special way somewhere.
+.. code-block:: php
+	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rollout']['features']= array(
+        'my_first_feature' => array(
+                'threshold' => 0.1,
+        ),
+        'my_second_feature' => array(
+                'threshold' => 0.5,
+        ),
+	);
+
+
+Here you see to Features defined "my_frist_feature" and "my_second_feature" are just names to identify your
+its recomend to give them readable names.
+
+threshold Parameter 
+	defines how much of your users get to see this feature. 0 means nobody 1 means everybody. 0.5 means 50% of your users.
+	0.1 means 10%, 0.05 means 5%. and so on. 
+
 
 
 .. _admin-faq:

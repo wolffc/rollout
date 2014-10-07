@@ -9,13 +9,13 @@
 .. _start:
 
 =============================================================
-Rollout
+Feature Rollout / A/B Testing (rollout)
 =============================================================
 
 .. only:: html
 
 	:Classification:
-		<extension key>
+		rollout
 
 	:Version:
 		|release|
@@ -24,19 +24,19 @@ Rollout
 		en
 
 	:Description:
-		Manual covering TYPO3 extension <extension name>
+		Manual covering TYPO3 extension Feature Rollout (rollout)
 
 	:Keywords:
-		comma,separated,list,of,keywords
+		rollout,feature,test,AB-Test
 
 	:Copyright:
-		2013
+		2014
 
 	:Author:
-		Your name
+		Christian Wolff
 
 	:Email:
-		you@domain.tld
+		chris@connye.com
 
 	:License:
 		This document is published under the Open Content License
@@ -57,9 +57,7 @@ Rollout
 	:glob:
 
 	Introduction/Index
-	User/Index
 	Administrator/Index
-	Configuration/Index
 	Developer/Index
 	KnownProblems/Index
 	ToDoList/Index
